@@ -10,10 +10,7 @@ export default class Student extends Entity<StudentProps> {
     return this.props.name
   }
 
-  static create(
-    props: StudentProps,
-    id?: UniqueEntityID
-  ) {
+  static create(props: StudentProps, id?: UniqueEntityID) {
     const student = new Student(props, id)
 
     return student
