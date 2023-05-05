@@ -1,6 +1,6 @@
-import Entity from '@/core/entities/entity'
-import UniqueEntityID from '@/core/entities/value-objects/unique-entity-id'
-import Optional from '@/core/types/optional'
+import { Entity } from '@/core/entities/entity'
+import { UniqueEntityID } from '@/core/entities/value-objects/unique-entity-id'
+import { Optional } from '@/core/types/optional'
 
 interface AnswerProps {
   questionId: UniqueEntityID
@@ -10,7 +10,7 @@ interface AnswerProps {
   updatedAt?: Date
 }
 
-export default class Answer extends Entity<AnswerProps> {
+export class Answer extends Entity<AnswerProps> {
   get questionId() {
     return this.props.questionId
   }

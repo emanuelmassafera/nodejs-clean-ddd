@@ -1,6 +1,6 @@
-import UniqueEntityID from './value-objects/unique-entity-id'
+import { UniqueEntityID } from './value-objects/unique-entity-id'
 
-export default class Entity<T> {
+export class Entity<T> {
   private _id: UniqueEntityID
   protected props: T
 

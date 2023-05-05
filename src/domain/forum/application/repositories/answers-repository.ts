@@ -1,5 +1,5 @@
-import Answer from '@/domain/forum/enterprise/entities/answer'
+import { Answer } from '@/domain/forum/enterprise/entities/answer'
 
-export default interface AnswersRepository {
+export interface AnswersRepository {
   create(answer: Answer): Promise<void>
 }

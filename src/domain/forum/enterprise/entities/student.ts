@@ -1,11 +1,11 @@
-import Entity from '@/core/entities/entity'
-import UniqueEntityID from '@/core/entities/value-objects/unique-entity-id'
+import { Entity } from '@/core/entities/entity'
+import { UniqueEntityID } from '@/core/entities/value-objects/unique-entity-id'
 
 interface StudentProps {
   name: string
 }
 
-export default class Student extends Entity<StudentProps> {
+export class Student extends Entity<StudentProps> {
   get name() {
     return this.props.name
   }

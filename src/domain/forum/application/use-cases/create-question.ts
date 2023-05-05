@@ -1,6 +1,6 @@
-import UniqueEntityID from '@/core/entities/value-objects/unique-entity-id'
-import Question from '@/domain/forum/enterprise/entities/question'
-import QuestionsRepository from '../repositories/questions-repository'
+import { UniqueEntityID } from '@/core/entities/value-objects/unique-entity-id'
+import { Question } from '@/domain/forum/enterprise/entities/question'
+import { QuestionsRepository } from '../repositories/questions-repository'
 
 interface CreateQuestionUseCaseRequest {
   authorId: string
@@ -12,7 +12,7 @@ interface CreateQuestionUseCaseResponse {
   question: Question
 }
 
-export default class CreateQuestionUseCase {
+export class CreateQuestionUseCase {
   constructor(private questionsRepository: QuestionsRepository) {}
 
   async execute({

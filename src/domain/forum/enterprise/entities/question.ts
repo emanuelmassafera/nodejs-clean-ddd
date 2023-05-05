@@ -1,7 +1,7 @@
-import Entity from '@/core/entities/entity'
-import UniqueEntityID from '@/core/entities/value-objects/unique-entity-id'
-import Optional from '@/core/types/optional'
-import Slug from './value-objects/slug'
+import { Entity } from '@/core/entities/entity'
+import { UniqueEntityID } from '@/core/entities/value-objects/unique-entity-id'
+import { Optional } from '@/core/types/optional'
+import { Slug } from './value-objects/slug'
 
 interface QuestionProps {
   authorId: UniqueEntityID
@@ -13,7 +13,7 @@ interface QuestionProps {
   updatedAt?: Date
 }
 
-export default class Question extends Entity<QuestionProps> {
+export class Question extends Entity<QuestionProps> {
   get authorId() {
     return this.props.authorId
   }
